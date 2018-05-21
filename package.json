@@ -1,0 +1,25 @@
+{
+  "name": "bst.js",
+  "version": "1.0.0",
+  "description": "Javascript implementation of Binary Search Tree",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praneshr/BST.JS.git"
+  },
+  "keywords": [
+    "bst",
+    "binary",
+    "search",
+    "tree"
+  ],
+  "author": "Pranesh Ravi <praneshpranesh@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/praneshr/BST.JS/issues"
+  },
+  "homepage": "https://github.com/praneshr/BST.JS#readme"
+}
