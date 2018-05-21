@@ -157,7 +157,7 @@ npm i @praneshravi/bst.js
 
 ``` bash
 npm install
-npm build:watch
+npm run build:watch
 ```
 
 ## License

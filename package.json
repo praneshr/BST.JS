@@ -4,11 +4,10 @@
   "description": "Javascript implementation of Binary Search Tree",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
+    "test": "mocha --compilers js:babel-core/register ./test/index.js",
     "build": "babel src -d .",
     "build:watch": "babel -w src -d .",
-    "prepublish": "npm run build",
-    "publish": "npm publish --access=public"
+    "prepublish": "npm run build && npm test"
   },
   "repository": {
     "type": "git",
@@ -28,6 +27,9 @@
   "homepage": "https://github.com/praneshr/BST.JS#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "expect": "^22.4.3",
+    "mocha": "^5.2.0"
   }
 }
