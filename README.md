@@ -26,7 +26,7 @@ npm i bst.js
 ## Examples
 
 ``` javascript
-  const BST = require('bst.js)
+  const BST = require('bst.js')
   const bst = new BST()
 
   bst.insertValue(25)
