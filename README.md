@@ -4,11 +4,11 @@ Javascript implementation of Binary Search Tree with helper methods
 ## Install
 
 ``` bash
-yarn add bst.js
+yarn add @praneshravi/bst.js
 
 #or
 
-npm i bst.js
+npm i @praneshravi/bst.js
 ```
 
 ## Available Methods
@@ -26,7 +26,7 @@ npm i bst.js
 ## Examples
 
 ``` javascript
-  const BST = require('bst.js')
+  const BST = require('@praneshravi/bst.js')
   const bst = new BST()
 
   // constructor takes optional paramaters
