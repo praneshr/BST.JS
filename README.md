@@ -22,6 +22,8 @@ npm i @praneshravi/bst.js
 - getTree
 - traverseTree
 - getPath
+- getNode
+- getParent
 
 ## Examples
 
@@ -150,6 +152,36 @@ npm i @praneshravi/bst.js
   //   { value: 70, direction: 'right' },
   //   { value: 90 }
   // ]
+
+  bst.getNode(10)
+  // {
+  //   value: 10,
+  //   right: {
+  //     value: 12
+  //     right: null,
+  //     left: null,
+  //   },
+  //   left: {
+  //     value: 4,
+  //     right: null,
+  //     left: null,
+  //   }
+  // }
+
+  bst.getParent(4)
+  // {
+  //   value: 10,
+  //   right: {
+  //     value: 12
+  //     right: null,
+  //     left: null,
+  //   },
+  //   left: {
+  //     value: 4,
+  //     right: null,
+  //     left: null,
+  //   }
+  // }
 
 ```
 

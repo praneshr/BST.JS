@@ -115,6 +115,48 @@ class BST {
     return this.tree
   }
 
+  getNode(x) {
+    let tree = this.tree
+    if (tree === null) return {}
+    while (true) {
+      const value = tree[this.valueKey]
+      if (value === x) {
+        return tree
+      }
+      if (x > value) {
+        if (tree[this.rightKey] === null) return false
+        tree = tree[this.rightKey]
+      } else if (x < value) {
+        if (tree[this.leftKey] === null) return false
+        tree = tree[this.leftKey]
+      } else {
+        return {}
+      }
+    }
+  }
+
+  getParent(x) {
+    let tree = this.tree
+    let parent
+    if (tree === null) return {}
+    while (true) {
+      const value = tree[this.valueKey]
+      if (value === x) {
+        return parent
+      }
+      parent = tree
+      if (x > value) {
+        if (tree[this.rightKey] === null) return false
+        tree = tree[this.rightKey]
+      } else if (x < value) {
+        if (tree[this.leftKey] === null) return false
+        tree = tree[this.leftKey]
+      } else {
+        return {}
+      }
+    }
+  }
+
   traverseTree(type = 'inorder') {
     let path = []
     switch (type.toLowerCase()) {

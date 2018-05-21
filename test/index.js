@@ -73,7 +73,6 @@ describe('Testing BST.js', () => {
     bst.insertValue(30)
     bst.insertValue(25)
     bst.insertValue(40)
-    bst.insertValue(30)
     bst.insertValue(35)
     bst.insertValue(20)
     bst.insertValue(10)
@@ -83,6 +82,45 @@ describe('Testing BST.js', () => {
       { value: 20, direction: 'left' },
       { value: 10 }
     ])
+  })
+
+
+  it('Should return the node for a given value', () => {
+    const bst = new BST()
+    bst.insertValue(30)
+    bst.insertValue(25)
+    bst.insertValue(40)
+    bst.insertValue(35)
+    bst.insertValue(20)
+    bst.insertValue(10)
+    expect(bst.getNode(40)).toEqual({
+      value: 40,
+      left: {
+        value: 35,
+        right: null,
+        left: null,
+      },
+      right: null,
+    })
+  })
+
+  it('Should return the parent node for a given value', () => {
+    const bst = new BST()
+    bst.insertValue(30)
+    bst.insertValue(25)
+    bst.insertValue(40)
+    bst.insertValue(35)
+    bst.insertValue(20)
+    bst.insertValue(10)
+    expect(bst.getParent(10)).toEqual({
+      value: 20,
+      left: {
+        value: 10,
+        right: null,
+        left: null,
+      },
+      right: null,
+    })
   })
 
 })
