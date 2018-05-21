@@ -1,5 +1,5 @@
 # BST.JS
-Javascript implementation of Binary Search Tree
+Javascript implementation of Binary Search Tree with helper methods
 
 ## Install
 
@@ -29,6 +29,17 @@ npm i bst.js
   const BST = require('bst.js')
   const bst = new BST()
 
+  // constructor takes optional paramaters
+  //
+  // new BST(tree, valueKey, leftKey, rightKey)
+  //
+  // tree = existing BST (default: null)
+  // valueKey = key used for value (default: 'value')
+  // leftKey = key used for left edge (default: 'left')
+  // rightKey = key used for right edge (default: 'right')
+  //
+
+
   bst.insertValue(25)
   bst.insertValue(15)
   bst.insertValue(50)
@@ -45,18 +56,23 @@ npm i bst.js
   bst.insertValue(66)
   bst.insertValue(90)
 
-  bst.getRootValue() // prints 25
+  bst.getRootValue()
+  // prints 25
 
-  bst.hasValue(4) // true
-  bst.hasValue(100) // false
+  bst.hasValue(4)
+  // true
+  bst.hasValue(100)
+  // false
 
-  bst.getMinValue() // 4
-  bst.getMaxValue() // 90
+  bst.getMinValue()
+  // 4
+  bst.getMaxValue()
+  // 90
 
-  bst.getDepth() // 4
+  bst.getDepth()
+  // 4
 
   JSON.stringify(bst.getTree(), null, 4)
-
   // {
   //   "value": 25,
   //   "right": {
@@ -119,9 +135,12 @@ npm i bst.js
   //   }
   // }
 
-  bst.traverseTree('inorder') // [ 4, 10, 12, 15, 18, 22, 24, 25, 31, 35, 44, 50, 66, 70, 90 ]
-  bst.traverseTree('preorder') // [ 25, 15, 10, 4, 12, 22, 18, 24, 50, 35, 31, 44, 70, 66, 90 ]
-  bst.traverseTree('postorder') // [ 4, 12, 10, 18, 24, 22, 15, 31, 44, 35, 66, 90, 70, 50, 25 ]
+  bst.traverseTree('inorder')
+  // [ 4, 10, 12, 15, 18, 22, 24, 25, 31, 35, 44, 50, 66, 70, 90 ]
+  bst.traverseTree('preorder')
+  // [ 25, 15, 10, 4, 12, 22, 18, 24, 50, 35, 31, 44, 70, 66, 90 ]
+  bst.traverseTree('postorder')
+  // [ 4, 12, 10, 18, 24, 22, 15, 31, 44, 35, 66, 90, 70, 50, 25 ]
 
   bst.getPath(90)
   // 'direction' means the direction in which the tree was traversed to reach the specified value
@@ -133,3 +152,13 @@ npm i bst.js
   // ]
 
 ```
+
+## Development
+
+``` bash
+npm install
+npm build:watch
+```
+
+## License
+MIT
