@@ -123,4 +123,18 @@ describe('Testing BST.js', () => {
     })
   })
 
+  it('Should remove the given node and update the tree', () => {
+    const bst = new BST()
+    bst.insertValue(50)
+    bst.insertValue(30)
+    bst.insertValue(70)
+    bst.insertValue(20)
+    bst.insertValue(40)
+    bst.insertValue(60)
+    bst.insertValue(80)
+    console.log(JSON.stringify(bst.getTree(80), null, 4));
+    bst.removeNode(30)
+    console.log(JSON.stringify(bst.getTree(80), null, 4));
+  })
+
 })

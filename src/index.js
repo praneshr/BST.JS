@@ -135,6 +135,43 @@ class BST {
     }
   }
 
+  minValueNode(tree) {
+    while (true) {
+      const value = tree[this.valueKey]
+      if (tree[this.leftKey] === null) {
+        return tree
+      }
+      if (tree[this.leftKey]) {
+        tree = tree[this.leftKey]
+      }
+    }
+  }
+
+  removeNode(x) {
+    const remove = (tree) => {
+      if(tree === null) return tree
+      const value = tree[this.valueKey]
+      if (x > value) {
+        tree[this.rightKey] = remove(tree[this.rightKey])
+      } else if (x < value) {
+        tree[this.leftKey] = remove(tree[this.leftKey])
+      } else {
+        if (tree[this.leftKey] === null) {
+          let temp = tree[this.rightKey]
+          return temp
+        } else if (tree[this.rightKey] === null) {
+          let temp = tree[this.leftKey]
+          return temp
+        }
+        let temp = this.minValueNode(tree[this.leftKey])
+        tree[this.valueKey] = temp[this.valueKey]
+        tree[this.rightKey] = remove(tree[this.rightKey])
+      }
+      return tree
+    }
+    this.tree = remove(this.tree)
+  }
+
   getParent(x) {
     let tree = this.tree
     let parent
