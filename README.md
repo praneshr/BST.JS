@@ -124,7 +124,7 @@ npm i bst.js
   bst.traverseTree('postorder') // [ 4, 12, 10, 18, 24, 22, 15, 31, 44, 35, 66, 90, 70, 50, 25 ]
 
   bst.getPath(90)
-  // 'direction' means the direction in which the tree is traversed to reach the specified value
+  // 'direction' means the direction in which the tree was traversed to reach the specified value
   // [
   //   { value: 25, direction: 'right' },
   //   { value: 50, direction: 'right' },
